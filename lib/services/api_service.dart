@@ -6,6 +6,18 @@ import 'package:fl_chart/fl_chart.dart';
 class ApiService {
   static const String baseUrl = 'https://api.coingecko.com/api/v3';
 
+// Fetch cryptocurrencies to add to homepage
+static Future<List<Crypto>> searchCryptos(String query) async {
+  final response = await http.get(Uri.parse('$baseUrl/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'));
+
+  if (response.statusCode == 200) {
+    final List<dynamic> data = jsonDecode(response.body);
+    return data.map<Crypto>((item) => Crypto.fromJson(item)).where((crypto) => crypto.name.toLowerCase().contains(query.toLowerCase())).toList();
+  } else {
+    throw Exception('Failed to load cryptocurrencies');
+  }
+}
+
   // Fetch details of a specific cryptocurrency
 static Future<Crypto> fetchCryptoDetails(String cryptoId) async {
   final response = await http.get(Uri.parse('$baseUrl/coins/markets?vs_currency=usd&ids=$cryptoId'));
