@@ -1,16 +1,19 @@
-# crypto
+# Crypto
 
-A new Flutter project.
+A Flutter project for the Seccom 2024 Hackathon.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+Crypto is a mobile application that allows users to check real-time prices of cryptocurrencies, including Bitcoin, Ethereum, and Dogecoin. Users can view detailed information about each cryptocurrency, including price changes and historical data visualized in charts.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Real-time Cryptocurrency Prices**: Displays current prices for popular cryptocurrencies.
+- **Details Page**: Users can tap on a cryptocurrency card to view more detailed information, including historical price data.
+- **Chart Visualization**: Historical price data can be visualized over various time frames.
+- **Responsive Design**: The app is designed to provide a smooth and user-friendly experience across different devices.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## API Integration
+
+The app fetches cryptocurrency data from the [CoinGecko API](https://www.coingecko.com/en/api).
+
