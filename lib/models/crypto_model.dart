@@ -28,8 +28,8 @@ class Crypto {
       'id': id,
       'name': name,
       'symbol': symbol,
-      'current_price': currentPrice,  // Match the API key here
-      'price_change_percentage_24h': priceChangePercentage24h,  // Match the API key here
+      'current_price': currentPrice,
+      'price_change_percentage_24h': priceChangePercentage24h,
     };
   }
 }
